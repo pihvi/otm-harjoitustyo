@@ -1,0 +1,94 @@
+commit 67b16b98b093dd43f70e02e61ec63ccdfe541d8e
+Author: Antti Mattila <antti.mattila@reaktor.fi>
+Date:   Tue Mar 13 04:02:55 2018 +0200
+
+    delete rename
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 1f45e2b7f7e5bda09900bf069cd54109926c89cc
+Author: Antti Mattila <antti.mattila@reaktor.fi>
+Date:   Tue Mar 13 04:02:31 2018 +0200
+
+    lisatty 1 2 3
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 73a62821112e28599c386b5ca51bf734b8d602ae
+Author: Antti Mattila <antti.mattila@reaktor.fi>
+Date:   Tue Mar 13 03:57:57 2018 +0200
+
+    rename
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 0ed2f591c2fdfaf879f7c8e6f347e067749f13d6
+Author: Antti Mattila <antti.mattila@reaktor.fi>
+Date:   Tue Mar 13 03:57:27 2018 +0200
+
+    poistettu toinen
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit ac38530c77d4e1aa00786eefb21cac1283ead9a5
+Author: Antti Mattila <antti.mattila@reaktor.fi>
+Date:   Tue Mar 13 03:57:10 2018 +0200
+
+    editoitu
+
+ tiedosto.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit c3b7dd20fc8f41a2945944f7d6b4c5b14e99bba0
+Author: Antti Mattila <antti.mattila@reaktor.fi>
+Date:   Tue Mar 13 03:56:17 2018 +0200
+
+    lisatty stuff
+
+ stuff/text.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 4c9b0387418ba74c5e177a58cf2ff51930042ff4
+Author: Antti Mattila <antti.mattila@reaktor.fi>
+Date:   Tue Mar 13 03:55:47 2018 +0200
+
+    muokattu toinen ja kolmas
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 406a2671cb534084a592ee83a6aed68ffb2f3ed2
+Author: Antti Mattila <antti.mattila@reaktor.fi>
+Date:   Tue Mar 13 03:55:10 2018 +0200
+
+    kolmas luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 51281ca9e0013e2efaae08a19ce943f57bf676e0
+Author: Antti Mattila <antti.mattila@reaktor.fi>
+Date:   Tue Mar 13 03:54:47 2018 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 91dbb5dc3698d8f67ef9df4ae0cc2fd58d683d5f
+Author: Antti Mattila <antti.mattila@reaktor.fi>
+Date:   Tue Mar 13 03:54:08 2018 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
