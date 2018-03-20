@@ -1,6 +1,12 @@
 # OTM-harjoitustyö
 *kohta lähtee*
 
+## Dokumentaatio
+
+[Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)
+
+[Työaikakirjanpito](dokumentaatio/tyoaika.md)
+
 ## Tehtävät
 
 **viikko1**
