@@ -8,32 +8,32 @@ public class Kassapaate {
     private int maukkaat;
 
     public Kassapaate() {
-        this.kassassaRahaa = 100000;
+        this.kassassaRahaa = 1000;
     }
 
     public int syoEdullisesti(int maksu) {
-        if (maksu >= 240) {
-            this.kassassaRahaa = kassassaRahaa + 240;
+        if (maksu >= 260) {
+            this.kassassaRahaa = kassassaRahaa + 260;
             ++this.edulliset;
-            return maksu - 240;
+            return maksu - 260;
         } else {
             return maksu;
         }
     }
 
     public int syoMaukkaasti(int maksu) {
-        if (maksu >= 400) {
-            this.kassassaRahaa = kassassaRahaa + 400;
+        if (maksu >= 460) {
+            this.kassassaRahaa = kassassaRahaa + 460;
             this.maukkaat++;
-            return maksu - 400;
+            return maksu - 460;
         } else {
             return maksu;
         }
     }
 
     public boolean syoEdullisesti(Maksukortti kortti) {
-        if (kortti.saldo() >= 240) {
-            kortti.otaRahaa(240);
+        if (kortti.saldo() >= 260) {
+            kortti.otaRahaa(260);
             this.edulliset++;
             return true;
         } else {
@@ -42,8 +42,8 @@ public class Kassapaate {
     }
 
     public boolean syoMaukkaasti(Maksukortti kortti) {
-        if (kortti.saldo() >= 400) {
-            kortti.otaRahaa(400);
+        if (kortti.saldo() >= 460) {
+            kortti.otaRahaa(460);
             this.maukkaat++;
             return true;
         } else {
