@@ -1,6 +1,6 @@
 # Vaatimusmäärittely
 
-## Soveluksen tarkoitus
+## Sovelluksen tarkoitus
 
 Sovelluksen tarkoitus on tehdä helposti luettavaksi RSS feed muotoisista lähteistä tuleva informaatio.
 
