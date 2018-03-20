@@ -1,5 +1,6 @@
 # OTM-harjoitustyö
-*kohta lähtee*
+
+Kielenä käytössä *JavaScript*
 
 ## Dokumentaatio
 
