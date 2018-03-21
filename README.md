@@ -10,6 +10,10 @@ Kielenä käytössä *JavaScript*
 
 ## Tehtävät
 
+**viikko2**
+
+![testikattavuus](laskarit/viikko2/kattavuus.png)
+
 **viikko1**
 
 [komentorivi.txt](laskarit/viikko1/komentorivi.txt)
