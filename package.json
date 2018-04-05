@@ -1,0 +1,23 @@
+{
+  "name": "feed-reader",
+  "version": "1.0.0",
+  "description": "RSS/Atom feed reader",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pihvi/otm-harjoitustyo.git"
+  },
+  "author": "Antti Mattila",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/pihvi/otm-harjoitustyo/issues"
+  },
+  "homepage": "https://github.com/pihvi/otm-harjoitustyo#readme",
+  "dependencies": {
+    "electron": "1.8.4"
+  }
+}

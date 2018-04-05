@@ -1,4 +1,7 @@
-# OTM-harjoitustyö
+# Feed Reader
+
+Sovellus kurssille Ohjelmistotekniikan menetelmät.
+Sovelluksen tarkoituksena on tehdä feedien (RSS/Atom) lukeminen helpoksi. 
 
 Kielenä käytössä *JavaScript*
 
@@ -8,10 +11,32 @@ Kielenä käytössä *JavaScript*
 
 [Työaikakirjanpito](dokumentaatio/tyoaika.md)
 
-## Tehtävät
+## Komentorivitoiminnot
 
-**viikko1**
+### Käynnistys
 
-[komentorivi.txt](laskarit/viikko1/komentorivi.txt)
+Ohjelma käynnistetään komennolla
 
-[gitlog.txt](laskarit/viikko1/gitlog.txt)
+```
+npm start
+```
+
+Testikattavuusraportti luodaan komennolla
+
+```
+npm test --coverage
+```
+
+### Testaus
+
+Testit suoritetaan komennolla
+
+```
+npm test
+```
+
+Testikattavuusraportti luodaan komennolla
+
+```
+npm test --coverage
+```
