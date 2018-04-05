@@ -41,6 +41,7 @@ Macillä saattaa tarvita tätä ennen
 brew reinstall watchman
 ```
 
+
 Testikattavuusraportti luodaan komennolla
 
 ```
