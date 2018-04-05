@@ -35,8 +35,14 @@ Testit suoritetaan komennolla
 npm test
 ```
 
+Macillä saattaa tarvita tätä ennen
+
+```
+brew reinstall watchman
+```
+
 Testikattavuusraportti luodaan komennolla
 
 ```
-npm test --coverage
+npm test -- --coverage
 ```
