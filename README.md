@@ -21,12 +21,6 @@ Ohjelma käynnistetään komennolla
 npm start
 ```
 
-Testikattavuusraportti luodaan komennolla
-
-```
-npm test --coverage
-```
-
 ### Testaus
 
 Testit suoritetaan komennolla
