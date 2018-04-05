@@ -1,4 +1,3 @@
-const datastore = require('../domain/datastore.js')
 const FeedReader = require('../domain/FeedReader.js')
 
 test('Feeds are listed in general category', () => {
