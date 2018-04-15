@@ -3,15 +3,39 @@
   <head>
     <meta charset="UTF-8">
     <title>Feed Reader</title>
+    <link rel="stylesheet" href="../photon/photon-0.1.2-dist/css/photon.min.css">
+    <style>
+
+    </style>
   </head>
   <body>
-    <h1>Your feeds</h1>
-    <ol id="feeds">
-    </ol>
+    <div class="window">
+      <div class="window-content">
+        <div class="pane-group">
+          <div class="pane-sm sidebar">
+            <nav class="nav-group">
+              <h5 class="nav-group-title">Main</h5>
+              <a class="nav-group-item active">
+                Feeds
+                <ol class="feeds">
+                </ol>
+              </a>
+            </nav>
+            <ol id="feeds">
+            </ol>
+          </div>
+          <div class="pane">todo: list view</div>
+          <div class="pane">todo: article view</div>
+        </div>
+      </div>
+      <footer class="toolbar toolbar-footer">
+        <h1 class="title">Provided by OTM harkka</h1>
+      </footer>
+    </div>
     <script>
       require('../domain/FeedReader.js')
         .feedList()
-        .forEach((feed) => {
+        .forEach(feed => {
           const li = document.createElement('li')
           li.innerText = feed.category + ': ' + feed.url
           document
