@@ -6,7 +6,8 @@
   "scripts": {
     "start": "electron .",
     "test": "jest",
-    "lint": "eslint domain && echo 'Styles are looking good!'"
+    "lint": "eslint domain && echo 'Styles are looking good!'",
+    "all": "npm run lint ; npm test -- --coverage"
   },
   "repository": {
     "type": "git",
