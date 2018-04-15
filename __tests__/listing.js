@@ -1,11 +1,20 @@
 const FeedReader = require('../domain/FeedReader.js')
 
-test('Feeds are listed in general category', () => {
-  expect(FeedReader.feedList()).toEqual([{
-    category: 'general',
-    url: 'http://example.com/rss'
-  }, {
-    category: 'general',
-    url: 'http://example.com/atom'
-  }])
+test('Feeds are listed under categories', () => {
+  expect(FeedReader.feedList()).toEqual({
+    "tech": [{
+      "category": "tech",
+      "name": "HackerNews",
+      "url": "http://example.com/HN"
+    }],
+    "today": [{
+      "category": "today",
+      "name": "Weather",
+      "url": "http://example.com/weather"
+    }, {
+      "category": "today",
+      "name": "Headlines",
+      "url": "http://example.com/headlines"
+    }]
+  })
 })

@@ -72,7 +72,7 @@ module.exports = {
         "guard-for-in": "error",
         "handle-callback-err": "error",
         "id-blacklist": "error",
-        "id-length": "error",
+        "id-length": "off",
         "id-match": "error",
         "implicit-arrow-linebreak": [
             "error",
@@ -93,7 +93,7 @@ module.exports = {
         "lines-around-directive": "error",
         "lines-between-class-members": "error",
         "max-depth": "error",
-        "max-len": "error",
+        "max-len": "off",
         "max-lines": "error",
         "max-nested-callbacks": "error",
         "max-params": "error",
@@ -205,7 +205,7 @@ module.exports = {
         "object-curly-newline": "off",
         "object-curly-spacing": "error",
         "object-shorthand": "error",
-        "one-var": "error",
+        "one-var": "off",
         "one-var-declaration-per-line": "error",
         "operator-assignment": "error",
         "operator-linebreak": "error",
@@ -234,7 +234,7 @@ module.exports = {
         "semi-style": "error",
         "sort-imports": "error",
         "sort-keys": [
-            "error",
+            "off",
             "asc"
         ],
         "sort-vars": "error",

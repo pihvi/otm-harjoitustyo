@@ -6,5 +6,5 @@
 | 13.3. | 3    | projektiaiheen suunnittelua ja Electroniin tutustumista |
 | 20.3. | 4    | vaatimusmääruttely |
 | 5.4.  | 6    | appsista ja testeistä alustava versio |
-| 15.4. | 3    | arkkitehtuurikuvaus, check-style käyttöönotto ja lisää sovelluslogiikkaa |
-| yht   | 21   | | 
+| 15.4. | 6    | arkkitehtuurikuvaus, check-style käyttöönotto, Photon ja lisää sovelluslogiikkaa |
+| yht   | 24   | | 

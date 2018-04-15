@@ -13,5 +13,6 @@ function getFeeds() {
 }
 
 // For initial testing
-addFeed('http://example.com/rss')
-addFeed('http://example.com/atom')
+addFeed({name: 'Weather', url: 'http://example.com/weather', category: 'today'})
+addFeed({name: 'Headlines', url: 'http://example.com/headlines', category: 'today'})
+addFeed({name: 'HackerNews', url: 'http://example.com/HN', category: 'tech'})

@@ -2,13 +2,11 @@ module.exports = {
   feedList
 }
 
+const _ = require('lodash')
 const datastore = require('./datastore.js')
 
 function feedList() {
-  return datastore
-    .getFeeds()
-    .map((feed) => ({
-      category: 'general',
-      url: feed
-    }))
+  return _(datastore.getFeeds())
+    .groupBy('category')
+    .value()
 }
