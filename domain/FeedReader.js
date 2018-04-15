@@ -1,5 +1,5 @@
 module.exports = {
-  feedList
+  feedList, addFeed
 }
 
 const _ = require('lodash')
@@ -9,4 +9,8 @@ function feedList() {
   return _(datastore.getFeeds())
     .groupBy('category')
     .value()
+}
+
+function addFeed(feed) {
+  datastore.addFeed(feed)
 }

@@ -18,3 +18,16 @@ test('Feeds are listed under categories', () => {
     }]
   })
 })
+
+test('Adding a feed to new category lists it there', () => {
+  FeedReader.addFeed({
+    category: 'news',
+    name: 'hesari',
+    url: 'http://hs.fi/rss',
+  })
+  expect(FeedReader.feedList()['news']).toEqual([{
+    "category": "news",
+    "name": "hesari",
+    "url": "http://hs.fi/rss"
+  }])
+})
