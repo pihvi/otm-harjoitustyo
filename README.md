@@ -43,3 +43,13 @@ Testikattavuusraportti luodaan komennolla
 ```
 npm test -- --coverage
 ```
+
+### Checkstyle
+
+Käytössä on ESLint koodin tarkistukseen. Tarkistus suoritetaan komennolla
+
+```
+ npm run lint
+```
+
+Mahdolliset virheilmoitukset tulostuvat komentoriville.
