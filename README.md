@@ -11,6 +11,8 @@ Kielenä käytössä *JavaScript*
 
 [Työaikakirjanpito](dokumentaatio/tyoaika.md)
 
+[Arkkitehtuurikuvaus](dokumentaatio/arkkitehtuuri.md)
+
 ## Komentorivitoiminnot
 
 ### Käynnistys
