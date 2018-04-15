@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <title>Feed Reader</title>
     <link rel="stylesheet" href="../photon/photon-0.1.2-dist/css/photon.min.css">
+    <script src="../node_modules/lodash/lodash.min.js"></script>
     <style>
+      ol {
+        padding: 0;
+        margin-left: 1em;
+        font-weight: bold;
+      }
 
+      li {
+        list-style: none;
+      }
+
+      li > div {
+        margin-left: 1em;
+        font-weight: normal;
+      }
     </style>
   </head>
   <body>
@@ -17,12 +31,10 @@
               <h5 class="nav-group-title">Main</h5>
               <a class="nav-group-item active">
                 Feeds
-                <ol class="feeds">
+                <ol id="feeds">
                 </ol>
               </a>
             </nav>
-            <ol id="feeds">
-            </ol>
           </div>
           <div class="pane">todo: list view</div>
           <div class="pane">todo: article view</div>
@@ -33,15 +45,21 @@
       </footer>
     </div>
     <script>
-      require('../domain/FeedReader.js')
-        .feedList()
-        .forEach(feed => {
-          const li = document.createElement('li')
-          li.innerText = feed.category + ': ' + feed.url
-          document
-            .getElementById('feeds')
-            .appendChild(li)
+      const categories = require('../domain/FeedReader.js').feedList()
+      console.log(categories, 'cats')
+      _.mapKeys(categories, (feeds, category) => {
+        console.log(category, 'cats2')
+        const li = document.createElement('li')
+        li.innerText = category
+        feeds.forEach(feed => {
+          const name = document.createElement('div')
+          name.innerText = feed.name
+          li.appendChild(name)
         })
+        document
+          .getElementById('feeds')
+          .appendChild(li)
+      })
     </script>
   </body>
 </html>
