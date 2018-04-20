@@ -68,6 +68,14 @@
       </footer>
     </div>
     <script>
+      document
+        .getElementById('add')
+        .onclick = function() {
+        document
+          .getElementById('add-feed')
+          .style.display = 'block'
+      }
+
       const categories = require('../domain/FeedReader.js').feedList()
       _.mapKeys(categories, (feeds, category) => {
         const li = document.createElement('li')
@@ -80,13 +88,6 @@
         document
           .getElementById('feeds')
           .appendChild(li)
-        document
-          .getElementById('add')
-          .onclick = function() {
-          document
-            .getElementById('add-feed')
-            .style.display = 'block'
-        }
       })
     </script>
   </body>
