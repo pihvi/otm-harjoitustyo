@@ -13,6 +13,10 @@ Kielenä käytössä *JavaScript*
 
 [Arkkitehtuurikuvaus](dokumentaatio/arkkitehtuuri.md)
 
+## Releaset
+
+[Viikko 5](releases/tag/viikko5)
+
 ## Komentorivitoiminnot
 
 ### Käynnistys
@@ -43,6 +47,26 @@ Testikattavuusraportti luodaan komennolla
 ```
 npm test -- --coverage
 ```
+
+### Suoritettavan paketin generointi
+
+Komento
+
+```
+npm run package
+```
+
+generoi hakemistoon release kyseiselle alustalle paketin.
+
+
+Komento
+
+```
+npm run package -- --all
+```
+
+generoi kaikille alustoille paketin, mutta vaatii alustasta riippuen eri kirjastoja.
+Esimerkiksi Macissä pitää olle Windowsia varten Wine asennettuna.
 
 ### Checkstyle
 
