@@ -53,19 +53,19 @@
               <h3>Add new feed</h3>
               <div class="form-group">
                 <label>Feed name</label>
-                <input type="text" class="form-control" placeholder="name">
+                <input id="name" type="text" class="form-control" placeholder="name">
               </div>
               <div class="form-group">
                 <label>Feed category</label>
-                <input type="text" class="form-control" placeholder="general">
+                <input id="category" type="text" class="form-control" placeholder="general">
               </div>
               <div class="form-group">
                 <label>Feed URL</label>
-                <input type="url" class="form-control" placeholder="http://example.com/rss">
+                <input id="url" type="url" class="form-control" placeholder="http://example.com/rss">
               </div>
               <div class="form-actions">
                 <div id="cancel-add-feed" class="btn btn-form btn-default">Cancel</div>
-                <div class="btn btn-form btn-primary">Add</div>
+                <div id="add-add-feed" class="btn btn-form btn-primary">Add</div>
               </div>
             </form>
             todo: list view
@@ -80,14 +80,39 @@
     <script>
       const app = require('../domain/FeedReader.js')
 
-      $('#add, #cancel-add-feed').click(() => $('#add-feed').toggle())
+      $('#add, #cancel-add-feed').click(toggleAddForm)
 
-      $('#feeds').append(_.map(app.feedList(), (feeds, category) => {
-        const divs = feeds
-          .map(feed => $('<div>' + feed.name + '</div>'))
-        return $('<li>' + category + '</li>')
-          .append(divs)
-      }))
+      $('#add-add-feed').click(() => {
+        const name = $('#name').val()
+        const category = $('#category').val()
+        const url = $('#url').val()
+        if (!name || !category || !url) {
+          alert('All fields are required')
+        } else {
+          app.addFeed({name, url, category})
+          updateFeedList()
+          toggleAddForm()
+        }
+      })
+
+      updateFeedList()
+
+      function updateFeedList() {
+        $('#feeds')
+          .empty()
+          .append(_.map(app.feedList(), (feeds, category) => {
+            const divs = feeds
+              .map(feed => $('<div>' + feed.name + '</div>'))
+            return $('<li>' + category + '</li>')
+              .append(divs)
+          }))
+      }
+
+      function toggleAddForm() {
+        $('#add-feed')
+          .toggle()[0]
+          .reset()
+      }
     </script>
   </body>
 </html>
