@@ -4,7 +4,7 @@
   "description": "RSS/Atom feed reader",
   "main": "main.js",
   "scripts": {
-    "package": "electron-packager ./ release/FeedReader2",
+    "package": "electron-packager ./ FeedReader  --out=release",
     "start": "electron .",
     "test": "jest",
     "lint": "eslint domain && echo 'Styles are looking good!'",
