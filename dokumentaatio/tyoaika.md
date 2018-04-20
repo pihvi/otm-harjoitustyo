@@ -8,5 +8,5 @@
 | 5.4.  | 6    | appsista ja testeistä alustava versio |
 | 15.4. | 6    | arkkitehtuurikuvaus, check-style käyttöönotto, Photon ja lisää sovelluslogiikkaa |
 | 19.4. | 2    | electron paketoinnin opettelua eri alustoille |
-| 20.4. | 5    | electron paketointi, release, sekvenssikaavio, feedin lisäys toiminnallisuus |
-| yht   | 31   | | 
+| 20.4. | 6    | electron paketointi, release, sekvenssikaavio, feedin lisäys toiminnallisuus |
+| yht   | 32   | | 

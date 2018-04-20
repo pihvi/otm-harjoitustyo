@@ -1,0 +1,12 @@
+title Add new feed
+
+User->Navigation: click on plus sign
+Navigation->Add new feed form: display
+User->Add new feed form: input name, category and URL
+User->Add new feed form: click add button
+Add new feed form->Domain: addFeed
+Add new feed form->Add new feed form: hide
+Add new feed form->Navigation: updateFeedList
+Navigation->Domain: feedList
+Navigation->Navigation: refresh feed list
+User->Navigation: see the added feed
