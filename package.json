@@ -4,6 +4,7 @@
   "description": "RSS/Atom feed reader",
   "main": "main.js",
   "scripts": {
+    "package": "electron-packager ./ release/FeedReader2",
     "start": "electron .",
     "test": "jest",
     "lint": "eslint domain && echo 'Styles are looking good!'",
@@ -24,8 +25,9 @@
     "lodash": "4.17.5"
   },
   "devDependencies": {
-    "jest": "22.4.3",
+    "electron-packager": "12.0.1",
     "eslint": "4.19.1",
-    "eslint-plugin-jest": "21.15.0"
+    "eslint-plugin-jest": "21.15.0",
+    "jest": "22.4.3"
   }
 }
