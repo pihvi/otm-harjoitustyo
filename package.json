@@ -4,7 +4,7 @@
   "description": "RSS/Atom feed reader",
   "main": "main.js",
   "scripts": {
-    "package": "electron-packager ./ FeedReader  --out=release",
+    "package": "electron-packager ./ FeedReader --out=release --ignore='(.git|.idea|__tests__|coverage|dokumentaatio|laskarit|release|README.md|.eslintrc.js|.gitignore)'",
     "start": "electron .",
     "test": "jest",
     "lint": "eslint domain && echo 'Styles are looking good!'",
