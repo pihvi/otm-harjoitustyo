@@ -7,4 +7,6 @@
 | 20.3. | 4    | vaatimusmääruttely |
 | 5.4.  | 6    | appsista ja testeistä alustava versio |
 | 15.4. | 6    | arkkitehtuurikuvaus, check-style käyttöönotto, Photon ja lisää sovelluslogiikkaa |
-| yht   | 24   | | 
+| 19.4. | 2    | electron paketoinnin opettelua eri alustoille |
+| 20.4. | 5    | electron paketointi, release, sekvenssikaavio, feedin lisäys toiminnallisuus |
+| yht   | 31   | | 
