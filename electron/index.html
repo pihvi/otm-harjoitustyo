@@ -78,11 +78,11 @@
       </footer>
     </div>
     <script>
-      $('#add').click(() => $('#add-feed').show())
-      $('#cancel-add-feed').click(() => $('#add-feed').hide())
+      const app = require('../domain/FeedReader.js')
 
-      const categories = require('../domain/FeedReader.js').feedList()
-      $('#feeds').append(_.map(categories, (feeds, category) => {
+      $('#add, #cancel-add-feed').click(() => $('#add-feed').toggle())
+
+      $('#feeds').append(_.map(app.feedList(), (feeds, category) => {
         const divs = feeds
           .map(feed => $('<div>' + feed.name + '</div>'))
         return $('<li>' + category + '</li>')
