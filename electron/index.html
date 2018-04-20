@@ -76,18 +76,12 @@
       $('#add').click(() => $('#add-feed').show())
 
       const categories = require('../domain/FeedReader.js').feedList()
-      _.mapKeys(categories, (feeds, category) => {
-        const li = document.createElement('li')
-        li.innerText = category
-        feeds.forEach(feed => {
-          const name = document.createElement('div')
-          name.innerText = feed.name
-          li.appendChild(name)
-        })
-        document
-          .getElementById('feeds')
-          .appendChild(li)
-      })
+      $('#feeds').append(_.map(categories, (feeds, category) => {
+        const divs = feeds
+          .map(feed => $('<div>' + feed.name + '</div>'))
+        return $('<li>' + category + '</li>')
+          .append(divs)
+      }))
     </script>
   </body>
 </html>
