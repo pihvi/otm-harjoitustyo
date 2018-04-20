@@ -15,7 +15,7 @@ Kielenä käytössä *JavaScript*
 
 ## Releaset
 
-[Viikko 5](releases/tag/viikko5)
+[Viikko 5](https://github.com/pihvi/otm-harjoitustyo/releases/tag/viikko5)
 
 ## Komentorivitoiminnot
 
