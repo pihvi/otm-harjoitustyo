@@ -59,8 +59,8 @@
                 <input type="url" class="form-control" placeholder="http://example.com/rss">
               </div>
               <div class="form-actions">
-                <button type="submit" class="btn btn-form btn-default">Cancel</button>
-                <button type="submit" class="btn btn-form btn-primary">Add</button>
+                <div id="cancel-add-feed" class="btn btn-form btn-default">Cancel</div>
+                <div class="btn btn-form btn-primary">Add</div>
               </div>
             </form>
             todo: list view
@@ -74,6 +74,7 @@
     </div>
     <script>
       $('#add').click(() => $('#add-feed').show())
+      $('#cancel-add-feed').click(() => $('#add-feed').hide())
 
       const categories = require('../domain/FeedReader.js').feedList()
       $('#feeds').append(_.map(categories, (feeds, category) => {
