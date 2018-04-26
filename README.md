@@ -13,6 +13,8 @@ Kielenä käytössä *JavaScript*
 
 [Arkkitehtuurikuvaus](dokumentaatio/arkkitehtuuri.md)
 
+[Käyttöohje](dokumentaatio/kayttoohje.md)
+
 ## Releaset
 
 [Viikko 5](https://github.com/pihvi/otm-harjoitustyo/releases/tag/viikko5)
