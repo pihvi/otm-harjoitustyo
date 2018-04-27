@@ -70,6 +70,17 @@ npm run package -- --all
 generoi kaikille alustoille paketin, mutta vaatii alustasta riippuen eri kirjastoja.
 Esimerkiksi Macissä pitää olle Windowsia varten Wine asennettuna.
 
+### JSDoc
+
+JSDoc generoidaan komennolla
+
+```
+ npm run docs
+```
+
+Generoitua dokumentaatiota voi tarkastella avaamalla selaimella tiedosto docs/inedx.html
+tai selata julkaistua dokumentaatiota: https://pihvi.github.io/otm-harjoitustyo/index.html
+
 ### Checkstyle
 
 Käytössä on ESLint koodin tarkistukseen. Tarkistus suoritetaan komennolla
