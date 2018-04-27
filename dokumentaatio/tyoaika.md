@@ -9,4 +9,5 @@
 | 15.4. | 6    | arkkitehtuurikuvaus, check-style käyttöönotto, Photon ja lisää sovelluslogiikkaa |
 | 19.4. | 2    | electron paketoinnin opettelua eri alustoille |
 | 20.4. | 6    | electron paketointi, release, sekvenssikaavio, feedin lisäys toiminnallisuus |
-| yht   | 32   | | 
+| 26.4. | 2    | käyttöohjeen teko ja jsdoccien aloitus |
+| yht   | 34   | | 
