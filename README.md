@@ -79,7 +79,7 @@ JSDoc generoidaan komennolla
 ```
 
 Generoitua dokumentaatiota voi tarkastella avaamalla selaimella tiedosto docs/inedx.html
-tai selata julkaistua dokumentaatiota: https://pihvi.github.io/otm-harjoitustyo/index.html
+tai selata julkaistua dokumentaatiota: https://pihvi.github.io/otm-harjoitustyo/global.html
 
 ### Checkstyle
 
