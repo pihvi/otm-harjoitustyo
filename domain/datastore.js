@@ -2,12 +2,12 @@ module.exports = {
   addFeed, getFeeds
 }
 
+const path = require('path')
 const userDir = require('electron').remote.getGlobal('userData')
 const NeDB = require('nedb')
-const db = new NeDB({filename: require('path').join(userDir, 'db')})
-db.loadDatabase()
+const db = new NeDB({filename: path.join(userDir, 'db')})
 
-const data = []
+db.loadDatabase()
 
 function addFeed(feed) {
   feed.type = 'feed'

@@ -4,7 +4,11 @@ module.exports = {
         "node": true
     },
     "extends": "eslint:recommended",
+    "globals": {
+      "alert": true
+    },
     "rules": {
+        "no-console": "off",
         "accessor-pairs": "error",
         "array-bracket-newline": "error",
         "array-bracket-spacing": "error",
@@ -109,7 +113,7 @@ module.exports = {
         ],
         "newline-before-return": "error",
         "newline-per-chained-call": "error",
-        "no-alert": "error",
+        "no-alert": "off",
         "no-array-constructor": "error",
         "no-await-in-loop": "error",
         "no-bitwise": "error",
