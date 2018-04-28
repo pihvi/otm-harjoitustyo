@@ -7,6 +7,7 @@ const datastore = require('./datastore.js')
 
 /**
  * Get list of feeds grouped by categories
+ * @param {function} cb - callback for getting the result
  */
 function feedList(cb) {
   datastore.getFeeds((err, feeds) => {
@@ -16,6 +17,7 @@ function feedList(cb) {
 
 /**
  * Add feed object to datastore
+ * @param {Object} feed - the feed object to store
  */
 function addFeed(feed) {
   datastore.addFeed(feed)
