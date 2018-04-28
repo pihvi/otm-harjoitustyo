@@ -30,6 +30,8 @@ $('#feeds').on('click', 'li > div', function(e) {
 })
 
 $('#list-view').on('click', 'li', function(e) {
+  $('#list-view li').removeClass('selected')
+  $(this).addClass('selected')
   $('#article-view').html($(this).data('content'))
 })
 
