@@ -27,9 +27,15 @@ updateFeedList()
 
 function showFeed(url) {
   (async () => {
-    let feed = await parser.parseURL(url)
+    $('#article-view').empty()
+    $('#list-view').empty()
+    const feed = await parser.parseURL(url)
     feed.items.forEach(item => {
       console.log(item)
+      $('#list-view').append($('<li/>')
+        .text(item.title)
+        .append($('<p/>')
+          .text(item.contentSnippet)))
     })
   })()
 }
@@ -40,7 +46,8 @@ function updateFeedList() {
       .empty()
       .append(_.map(categories, (feeds, category) => {
         const divs = feeds
-          .map(feed => $('<div>' + feed.name + '</div>').data('url', feed.url))
+          .map(feed => $('<div>' + feed.name + '</div>')
+            .data('url', feed.url))
         return $('<li>' + category + '</li>')
           .append(divs)
       }))
