@@ -23,6 +23,10 @@ $('#feeds').on('click', 'li > div', function(e) {
   showFeed($(this).data('url'))
 })
 
+$('#list-view').on('click', 'li', function(e) {
+  $('#article-view').html($(this).data('content'))
+})
+
 updateFeedList()
 
 function showFeed(url) {
@@ -31,11 +35,9 @@ function showFeed(url) {
     $('#list-view').empty()
     const feed = await parser.parseURL(url)
     feed.items.forEach(item => {
-      console.log(item)
       $('#list-view').append($('<li/>')
-        .text(item.title)
-        .append($('<p/>')
-          .text(item.contentSnippet)))
+        .data('content', item.content)
+        .text(item.title))
     })
   })()
 }
