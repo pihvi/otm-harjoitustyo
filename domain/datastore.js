@@ -2,17 +2,28 @@ module.exports = {
   addFeed, getFeeds
 }
 
+const userDir = require('electron').remote.getGlobal('userData')
+const NeDB = require('nedb')
+const db = new NeDB({filename: require('path').join(userDir, 'db')})
+db.loadDatabase()
+
 const data = []
 
 function addFeed(feed) {
-  data.push(feed)
+  feed.type = 'feed'
+  db.insert(feed, reportError)
 }
 
-function getFeeds() {
-  return data
+function getFeeds(cb) {
+  db.find({type: 'feed'}, (err, docs) => {
+    reportError(err)
+    cb(err, docs)
+  })
 }
 
-// For initial testing
-addFeed({name: 'Weather', url: 'http://example.com/weather', category: 'today'})
-addFeed({name: 'Headlines', url: 'http://example.com/headlines', category: 'today'})
-addFeed({name: 'HackerNews', url: 'http://example.com/HN', category: 'tech'})
+function reportError(err) {
+  if (err) {
+    alert('Failed to load or save data.')
+    console.error(err)
+  }
+}

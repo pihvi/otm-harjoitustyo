@@ -8,10 +8,10 @@ const datastore = require('./datastore.js')
 /**
  * Get list of feeds grouped by categories
  */
-function feedList() {
-  return _(datastore.getFeeds())
-    .groupBy('category')
-    .value()
+function feedList(cb) {
+  datastore.getFeeds((err, feeds) => {
+    cb(err, _.groupBy(feeds, 'category'))
+  })
 }
 
 /**

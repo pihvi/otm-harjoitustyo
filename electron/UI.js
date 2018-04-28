@@ -18,14 +18,16 @@ $('#add-add-feed').click(() => {
 updateFeedList()
 
 function updateFeedList() {
-  $('#feeds')
-    .empty()
-    .append(_.map(app.feedList(), (feeds, category) => {
-      const divs = feeds
-        .map(feed => $('<div>' + feed.name + '</div>'))
-      return $('<li>' + category + '</li>')
-        .append(divs)
-    }))
+  app.feedList((err, categories) => {
+    $('#feeds')
+      .empty()
+      .append(_.map(categories, (feeds, category) => {
+        const divs = feeds
+          .map(feed => $('<div>' + feed.name + '</div>'))
+        return $('<li>' + category + '</li>')
+          .append(divs)
+      }))
+  })
 }
 
 function toggleAddForm() {
