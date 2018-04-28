@@ -1,6 +1,12 @@
 const app = require('../domain/FeedReader.js')
+const shell = require('electron').shell
 const Parser = require('rss-parser')
 const parser = new Parser()
+
+$(document).on('click', 'a[href^="http"]', function(event) {
+  event.preventDefault()
+  shell.openExternal(this.href)
+})
 
 $('#add, #cancel-add-feed').click(toggleAddForm)
 
