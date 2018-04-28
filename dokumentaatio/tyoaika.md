@@ -10,4 +10,6 @@
 | 19.4. | 2    | electron paketoinnin opettelua eri alustoille |
 | 20.4. | 6    | electron paketointi, release, sekvenssikaavio, feedin lisäys toiminnallisuus |
 | 26.4. | 2    | käyttöohjeen teko ja jsdoccien aloitus |
-| yht   | 34   | | 
+| 27.4. | 2    | UI koodi omaan tiedostoon ja tietokantojen kokeiluja |
+| 28.4. | 7    | tietokanta, feedit käyttöliittymään ja release 6 |
+| yht   | 43   | | 
