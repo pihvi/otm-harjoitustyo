@@ -6,7 +6,7 @@
   "scripts": {
     "package": "electron-packager ./ FeedReader --out=release --ignore='(.git|.idea|__tests__|coverage|dokumentaatio|laskarit|release|README.md|.eslintrc.js|.gitignore)'",
     "docs": "jsdoc domain -d docs",
-    "start": "electron .",
+    "start": "npm install ; electron .",
     "test": "jest",
     "lint": "eslint domain && echo 'Styles are looking good!'",
     "all": "npm run docs ; npm run lint ; npm test -- --coverage"
