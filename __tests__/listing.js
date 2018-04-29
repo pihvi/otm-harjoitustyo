@@ -4,20 +4,21 @@ jest.mock('../domain/datastore')
 
 test('Feeds are listed under categories', done => {
   FeedReader.feedList((err, res) => {
+    expect(err).toEqual(null)
     expect(res).toEqual({
-      "tech": [{
-        "category": "tech",
-        "name": "HackerNews",
-        "url": "http://example.com/HN"
+      'tech': [{
+        'category': 'tech',
+        'name': 'HackerNews',
+        'url': 'http://example.com/HN'
       }],
-      "today": [{
-        "category": "today",
-        "name": "Weather",
-        "url": "http://example.com/weather"
+      'today': [{
+        'category': 'today',
+        'name': 'Weather',
+        'url': 'http://example.com/weather'
       }, {
-        "category": "today",
-        "name": "Headlines",
-        "url": "http://example.com/headlines"
+        'category': 'today',
+        'name': 'Headlines',
+        'url': 'http://example.com/headlines'
       }]
     })
     done()
@@ -28,13 +29,14 @@ test('Adding a feed to new category lists it there', done => {
   FeedReader.addFeed({
     category: 'news',
     name: 'hesari',
-    url: 'http://hs.fi/rss',
+    url: 'http://hs.fi/rss'
   })
   FeedReader.feedList((err, res) => {
-    expect(res['news']).toEqual([{
-      "category": "news",
-      "name": "hesari",
-      "url": "http://hs.fi/rss"
+    expect(err).toEqual(null)
+    expect(res.news).toEqual([{
+      'category': 'news',
+      'name': 'hesari',
+      'url': 'http://hs.fi/rss'
     }])
     done()
   })

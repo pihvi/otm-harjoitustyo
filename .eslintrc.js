@@ -5,20 +5,20 @@ module.exports = {
     },
     "extends": "eslint:recommended",
     "globals": {
+      "jest": true,
+      "test": true,
+      "expect": true,
       "alert": true
     },
     "rules": {
         "no-console": "off",
         "accessor-pairs": "error",
-        "array-bracket-newline": "error",
+        "array-bracket-newline": "off",
         "array-bracket-spacing": "error",
         "array-callback-return": "error",
-        "array-element-newline": "error",
+        "array-element-newline": "off",
         "arrow-body-style": "error",
-        "arrow-parens": [
-            "error",
-            "always"
-        ],
+        "arrow-parens": "off",
         "arrow-spacing": [
             "error",
             {

@@ -8,7 +8,7 @@
     "docs": "jsdoc domain -d docs",
     "start": "npm install ; electron .",
     "test": "jest",
-    "lint": "eslint domain && echo 'Styles are looking good!'",
+    "lint": "eslint domain __tests__ && echo 'Styles are looking good!'",
     "all": "npm run docs ; npm run lint ; npm test -- --coverage"
   },
   "repository": {

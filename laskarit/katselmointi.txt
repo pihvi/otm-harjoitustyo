@@ -1,0 +1,21 @@
+Koodi ladattu 28.4.2018 kello 23:55
+
+Koodin laatuvaatimukset täyttyvät erittäin hyvin.
+- Nimeäminen on selkeää ja johdonmukaista.
+- Funktiot ovat lyhyitä ja ytimekkäitä.
+- Copy pastea ei ole. Toki esimerkiksi taskServicessä ja eventHandlerissä on toistuvaa rakennetta, mitä saattaisi saada yhtenäistettyä apufunktiolla, mutta veikkaisin, että koodi ei olisi enää yhtä luettavaa ja selkeää, joten pitäisin tuon juuri noin.
+- Koodi on jaettu hienosti osiin ja vastuut omilla osa-alueilla selkeät ja yksinkertaiset.
+- Testejä on kattavasti yksikkö- ja integraatiotasolla ja kaikki meni läpi.
+
+Eli katselmoinnin puitteissa, kun pitäisi näistä löytää 6 parannettavaa kohtaa, on hieman hankala..
+
+Mielestäni isoin esiin noussut asia oli tietokanta. Sen pystyttämiseen voisi olla mukana joku skripti tai muu apu. Kannan konfiguraation kirjoittaminen suoraan koodin sekaan on myös varsin kyseenalaista, mutta tämä oli hyvin dokumentoitu ja oletettavasti tulee muuttumaan. Tuo konfigurointihan voisi olla siellä käyttöliittymässä, jossain asetusten takana. Käytännössähän on muuten vähän hankalaa ottaa tuo sovellus käyttöön. Nykymallia voisi parantaa ohjeella miten Mongo startataan omalla koneella ja mikä se konfigurointiparametri tällöin on ('mongodb://localhost'). Edellinen voisi olla jopa siellä valmiina defaulttina ja sen voisi sitten ylikirjoittaa konfiguraatiosta.
+
+Asennuksen jälkeen 'git status' näytti rumalta, koska .gitignoressa ei ole node_modulesia. Tuon voisi sinne lisätä. Voisihan sen asennuskomennonkin mainita 'npm install', mutta toki sen voi myös olettaa olevan implisiittisestikin selvä asia.
+
+eventHandler.test.js hieman ponnahtaa tuolta esiin. Se on ignoroitu package.jsonissa ja sisältää myös huonompilaatuista koodia (mm. käyttämättön muuttuja ja tuplavälilyönti). Samassa huomasin, että testikoodi ei ole linttauksen piirissä, joten sen voisi myös ottaa mukaan laadun valvontaan. Samalla totesin myös ettei testit ole omassakaan työssäni mukana linttauksessa, joten korjaanpa senkin :)
+Tuon eventHandler testin voisi muokata sellaiseen muotoon, että se menee linttauksesta läpi tai poistaa kokonaan, jos se ei ole tulossa käyttöön.
+
+Vaatimusmäärittelyyn verrattuna toiminnallisuutta on toistaiseksi melko vähän, mutta kuitenkin perustoiminnallisuus ja sovelluksen runko on hyvällä mallilla. Olisin olettanut ylemmässä kohdassa klikatessani taskin valmiiksi sen siirtyvän jonnekin "valmiit" listalle eikä jäisi siihen samalla paikalle. Mutta tuo käyttöliittymä on selkeästi vielä työn alla, joten turhaa sitä sen enempää analysoida.
+
+Package.jsonista löytyy kätevästi skriptejä ja sovellus on kaikin puolin rakenteeltaan hienosti tehty. Hyvältä näyttää!
