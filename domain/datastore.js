@@ -1,5 +1,5 @@
 module.exports = {
-  addFeed, getFeeds
+  addFeed, getFeeds, deleteFeed
 }
 
 const path = require('path')
@@ -10,7 +10,7 @@ const db = new NeDB({filename: path.join(userDir, 'db')})
 db.loadDatabase()
 
 function deleteFeed(id, cb) {
-  cb()
+  db.remove({_id: id}, {}, cb)
 }
 
 function addFeed(feed) {

@@ -1,5 +1,5 @@
 module.exports = {
-  feedList, addFeed
+  feedList, addFeed, deleteFeed
 }
 
 const _ = require('lodash')
