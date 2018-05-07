@@ -39,6 +39,7 @@ updateFeedList()
 
 function showFeed(url) {
   (async () => {
+    $('#welcome').hide()
     $('#article-view').empty()
     $('#list-view').empty()
     const feed = await parser.parseURL(url)
