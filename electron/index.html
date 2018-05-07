@@ -37,6 +37,21 @@
         text-decoration: underline;
       }
 
+      #feeds li > div {
+        padding-left: 4em;
+        margin-left: -3em;
+      }
+
+      #feeds li > div .icon-trash {
+        position: absolute;
+        margin-left: -1.5em;
+        visibility: hidden;
+      }
+
+      #feeds li > div:hover .icon-trash {
+        visibility: visible;
+      }
+
       .pane.list-view {
         max-width: 25em;
       }

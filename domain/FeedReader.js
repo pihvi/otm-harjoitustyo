@@ -22,3 +22,12 @@ function feedList(cb) {
 function addFeed(feed) {
   datastore.addFeed(feed)
 }
+
+/**
+ * Delete feed with given id
+ * @param {Object} id - id of the feed to delete
+ * @param {function} cb - callback after deletion
+ */
+function deleteFeed(id, cb) {
+  datastore.deleteFeed(id, cb)
+}

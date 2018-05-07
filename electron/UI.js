@@ -29,6 +29,14 @@ $('#feeds').on('click', 'li > div', function(e) {
   showFeed($(this).data('url'))
 })
 
+$('#feeds').on('click', 'li > div .icon-trash', function(e) {
+    e.stopPropagation()
+    if (confirm('Delete ' + $(this).parent().text() + '?')) {
+      app.deleteFeed('lol', updateFeedList)
+    }
+  }
+)
+
 $('#list-view').on('click', 'li', function(e) {
   $('#list-view li').removeClass('selected')
   $(this).addClass('selected')
@@ -57,7 +65,7 @@ function updateFeedList() {
       .empty()
       .append(_.map(categories, (feeds, category) => {
         const divs = feeds
-          .map(feed => $('<div>' + feed.name + '</div>')
+          .map(feed => $('<div><span class="icon icon-trash"/>' + feed.name + '</div>')
             .data('url', feed.url))
         return $('<li>' + category + '</li>')
           .append(divs)

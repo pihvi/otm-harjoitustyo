@@ -9,6 +9,10 @@ const db = new NeDB({filename: path.join(userDir, 'db')})
 
 db.loadDatabase()
 
+function deleteFeed(id, cb) {
+  cb()
+}
+
 function addFeed(feed) {
   feed.type = 'feed'
   db.insert(feed, reportError)
