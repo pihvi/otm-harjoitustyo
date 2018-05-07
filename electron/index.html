@@ -59,6 +59,15 @@
         max-width: 100%;
         height: auto;
       }
+
+      #welcome {
+        padding: 1em;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+      }
     </style>
   </head>
   <body>
@@ -77,6 +86,15 @@
             </nav>
           </div>
           <div class="pane list-view">
+            <div id="welcome">
+              <h4>Welcome to FeedReader!</h4>
+              <p>Add new feeds from the plus symbol located on the left navigation.</p>
+              <p>Good feeds to start with are for example:</p>
+              <ul>
+                <li>BoingBoing:<br/>&nbsp;&nbsp;https://boingboing.net/feed</li>
+                <li>TechCrunch:<br/>&nbsp;&nbsp;http://feeds.feedburner.com/TechCrunch</li>
+              </ul>
+            </div>
             <form id="add-feed">
               <h3>Add new feed</h3>
               <div class="form-group">
