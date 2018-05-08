@@ -10,6 +10,18 @@ $(document).on('click', 'a[href^="http"]', function(event) {
 
 $('#add, #cancel-add-feed').click(toggleAddForm)
 
+$('#feeds').on('click', '.selected .unread', e => {
+  e.stopPropagation()
+  $('#list-view li').each(function() {
+    app.markItemAsRead($(this).data('id'), $(this).data('feed'), err => {
+      if (!err) {
+        $(this).addClass('read')
+      }
+      updateReadCount()
+    })
+  })
+})
+
 $('#add-add-feed').click(() => {
   const name = $('#name').val()
   const category = $('#category').val()
