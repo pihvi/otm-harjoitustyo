@@ -1,12 +1,10 @@
 # Käyttöohje
 
-## Ohjelman käynnistäminen
+## Ohjelman lataaminen
 
-Ohjelma käynnistetään komennolla 
+Lataa käyttöjärjestelmällesi kohdistuva paketti täältä: https://github.com/pihvi/otm-harjoitustyo/releases/tag/final
 
-```
-npm start
-```
+Pura paketti ja käynnistä sieltä tullut FeedReader ohjelma.
 
 ## Feedin lisäys
 
