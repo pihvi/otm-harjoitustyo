@@ -19,19 +19,23 @@ Vasemmassa sarakkeessa on RSS feedien lähteet. Keskellä on yhden feedin artikk
 
 ## Perusversion tarjoama toiminnallisuus
 
-### Ensimmäinen käyttökerta
+### Kun feedejä ei ole yhtään
 
 - käyttäjälle näytetään ohje, kuinka lisätään uusi feedi
 
 - käyttäjälle tarjotaan muutama suosittu feedivaihtoehto
 
-### Jatkuva käyttö
+### Kun feedejä on lisätty
 
-- käyttäjä näkee avatessa uusien artikkelien määrät feedeissä
+- käyttäjä näkee avatessa feedin sen uusien artikkelien määrät
 
 - käyttäjän artikkeli merkkautuu luetuksi, kun se avataan
 
 - käyttäjä voi merkata yksittäisen feedin luetuksi
+
+- feedien ryhmittely kategorioihin
+
+- feedi voidaan poistaa
 
 ## Jatkokehitysideoita
 
@@ -39,4 +43,3 @@ Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seura
 
 - rekisteröityminen ja tilan tallentaminen pilveen, jolloin sama käyttäja voi käyttää useaa tietokonetta
 - jakaminen artikkeleihin, some, email, jne.
-- feedien ryhmittely kategorioihin
