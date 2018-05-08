@@ -25,3 +25,11 @@ Klikkaa lisäämäsi feedin nimeä nähdäksesi sen listauksen.
 Klikkaa listauksessa otsikkoa nähdäksesi koko sisällön.
 
 Testaa esimerkiksi feedillä: https://boingboing.net/feed
+
+![Poisto ja luetut](delete-read-count.png)
+
+Feedin nimen vasemmalla puolella olevasta roskakorista saa poistettua feedin.
+
+Feedin nimen oikealla puolella näkee lukemattomien artikkelien määrä feedissä.
+Saat merkattua kaikki luetuksi, kun kyseinen feedi on aktiivinen ja numeroa klikkaa.
+Kun feedin artikkelin avaa luettavaksi, se merkkautuu automaattisesti luetuksi ja muuttuu harmaaksi listauksessa.
