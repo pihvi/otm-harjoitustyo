@@ -26,7 +26,7 @@ $('#add-add-feed').click(() => {
 $('#feeds').on('click', 'li > div', function(e) {
   $('#feeds div').removeClass('selected')
   $(this).addClass('selected')
-  showFeed($(this).data('url'))
+  showFeed($(this).data('id'), $(this).data('url'))
 })
 
 $('#feeds').on('click', 'li > div .icon-trash', function(e) {
@@ -40,12 +40,27 @@ $('#feeds').on('click', 'li > div .icon-trash', function(e) {
 $('#list-view').on('click', 'li', function(e) {
   $('#list-view li').removeClass('selected')
   $(this).addClass('selected')
+  app.markItemAsRead($(this).data('id'), $(this).data('feed'), updateReadItems)
   $('#article-view').html($(this).data('content'))
 })
 
 updateFeedList()
 
-function showFeed(url) {
+function updateReadItems() {
+  $('#list-view li').each(function() {
+    app.isReadItem($(this).data('id'), $(this).data('feed'), (err, isRead) => {
+      $(this).toggleClass('read', isRead)
+      updateReadCount()
+    })
+  })
+}
+
+function updateReadCount() {
+  const unread = $('#list-view li:not(.read)').length
+  $('#feeds div.selected .unread').text(unread > 0 ? unread : '')
+}
+
+function showFeed(id, url) {
   (async () => {
     $('#welcome').hide()
     $('#article-view').empty()
@@ -54,6 +69,8 @@ function showFeed(url) {
     feed.items.forEach(item => {
       $('#list-view').append($('<li/>')
         .data('content', item.content)
+        .data('feed', id)
+        .data('id', item.guid)
         .text(item.title))
     })
   })()
@@ -65,7 +82,7 @@ function updateFeedList() {
       .empty()
       .append(_.map(categories, (feeds, category) => {
         const divs = feeds
-          .map(feed => $('<div><span class="icon icon-trash"/>' + feed.name + '</div>')
+          .map(feed => $('<div><span class="icon icon-trash"/>' + feed.name + '<span class="unread"/></div>')
             .data('url', feed.url)
             .data('id', feed._id))
         return $('<li>' + category + '</li>')
