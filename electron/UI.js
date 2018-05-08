@@ -64,7 +64,6 @@ function updateReadCount() {
 
 function showFeed(id, url) {
   (async () => {
-    $('#welcome').hide()
     $('#article-view').empty()
     $('#list-view').empty()
     const feed = await parser.parseURL(url)
@@ -91,6 +90,9 @@ function updateFeedList() {
         return $('<li>' + category + '</li>')
           .append(divs)
       }))
+    if ($('#feeds li').length === 0) {
+      $('#welcome').show()
+    }
   })
 }
 
