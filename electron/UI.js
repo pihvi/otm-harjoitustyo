@@ -92,6 +92,8 @@ function updateFeedList() {
       }))
     if ($('#feeds li').length === 0) {
       $('#welcome').show()
+    } else {
+      $('#welcome').hide()
     }
   })
 }
