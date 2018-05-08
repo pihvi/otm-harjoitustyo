@@ -1,10 +1,25 @@
 const deleted = []
 
 module.exports = {
-  addFeed, getFeeds, deleteFeed, deleted
+  addFeed, getFeeds, deleteFeed, deleted, getReadItem, markItemAsRead
 }
 
 const data = []
+const read = {}
+
+function markItemAsRead(itemId, feedId, cb) {
+  read[itemId + feedId] = {item: itemId, feed: feedId}
+  cb(null)
+}
+
+function getReadItem(itemId, feedId, cb) {
+  const res = []
+
+  if (read[itemId + feedId]) {
+    res.push(read[itemId + feedId])
+  }
+  cb(null, res)
+}
 
 function addFeed(feed) {
   data.push(feed)
