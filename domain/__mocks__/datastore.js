@@ -1,5 +1,7 @@
+const deleted = []
+
 module.exports = {
-  addFeed, getFeeds
+  addFeed, getFeeds, deleteFeed, deleted
 }
 
 const data = []
@@ -10,6 +12,11 @@ function addFeed(feed) {
 
 function getFeeds(cb) {
   cb(null, data)
+}
+
+function deleteFeed(id, cb) {
+  deleted.push(id)
+  cb()
 }
 
 addFeed({name: 'Weather', url: 'http://example.com/weather', category: 'today'})

@@ -41,3 +41,11 @@ test('Adding a feed to new category lists it there', done => {
     done()
   })
 })
+
+test('Deleting feed deletes it from datastore', done => {
+  FeedReader.deleteFeed('feedid', () => {
+    const deleted = require('../domain/datastore.js').deleted
+    expect(deleted[0]).toEqual('feedid')
+    done()
+  })
+})
