@@ -12,12 +12,13 @@ npm start
 
 Paina + nappia avataksesi feedin lisäys lomakkeen:
 
-![Lisää](add.png)
+<img src="add.png" width="150">
 
 
 Täytä feedin tiedot ja paina "Add" nappia:
 
-![Lisää lomake](add-form.png)
+<img src="add-form.png" width="350">
+
 
 Uusi feedi on ilmestynyt navigaatioon.
 
