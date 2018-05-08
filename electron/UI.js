@@ -40,7 +40,9 @@ $('#feeds').on('click', 'li > div .icon-trash', function(e) {
 $('#list-view').on('click', 'li', function(e) {
   $('#list-view li').removeClass('selected')
   $(this).addClass('selected')
-  app.markItemAsRead($(this).data('id'), $(this).data('feed'), updateReadItems)
+  if (!$(this).hasClass('read')) {
+    app.markItemAsRead($(this).data('id'), $(this).data('feed'), updateReadItems)
+  }
   $('#article-view').html($(this).data('content'))
 })
 
