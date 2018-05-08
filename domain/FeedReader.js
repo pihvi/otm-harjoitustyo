@@ -23,7 +23,7 @@ function markItemAsRead(itemId, feedId, cb) {
  */
 function isReadItem(itemId, feedId, cb) {
   datastore.getReadItem(itemId, feedId, (err, items) => {
-    cb(err, items != null && items.length > 0)
+    cb(err, items !== null && items.length > 0)
   })
 }
 
