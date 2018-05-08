@@ -73,6 +73,7 @@ function showFeed(id, url) {
         .data('id', item.guid)
         .text(item.title))
     })
+    updateReadItems()
   })()
 }
 
