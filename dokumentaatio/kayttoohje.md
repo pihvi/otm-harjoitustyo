@@ -26,7 +26,7 @@ Klikkaa listauksessa otsikkoa nähdäksesi koko sisällön.
 
 Testaa esimerkiksi feedillä: https://boingboing.net/feed
 
-![Poisto ja luetut](delete-read-count.png)
+<img src="delete-read-count.png" width="750">
 
 Feedin nimen vasemmalla puolella olevasta roskakorista saa poistettua feedin.
 
