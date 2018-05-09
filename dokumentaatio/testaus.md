@@ -12,7 +12,7 @@ toiminnallisuus vastaa kuitenkin oikeaa tietokantaa.
 
 Käyttöliittymäkerrosta lukuunottamatta sovelluksen testauksen rivi- ja haarautumakattavuus on 100%
 
-<img src="kattavuus.png" width="400">
+<img src="kattavuus.png" width="700">
 
 ## Järjestelmätestaus
 
